@@ -1,0 +1,22 @@
+def extract_last_two_digits(n):
+    """
+    Function to extract the last two digits of a given integer `n`.
+    """
+    if n < 100:
+        raise ValueError("The number of digits should be greater than 2.")
+    else:
+        last_two_digits = n % 100
+        return last_two_digits
+
+def main():
+   
+    n = int(input("Enter a number with more than 2 digits: "))
+
+   
+    last_two_digits = extract_last_two_digits(n)
+
+  
+    print("The last two digits of {} are {:02d}.".format(n, last_two_digits))
+
+if __name__ == "__main__":
+    main()
