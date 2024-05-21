@@ -1,0 +1,20 @@
+def can_form_rectangle(a, b, c, d):
+   
+    Function to determine if a rectangle can be formed with the given sides.
+    
+   
+    sides = sorted([a, b, c, d])
+
+    
+    return sides[0] == sides[1] and sides[2] == sides[3]
+
+
+a = float(input("Enter the first side: "))
+b = float(input("Enter the second side: "))
+c = float(input("Enter the third side: "))
+d = float(input("Enter the fourth side: "))
+
+if can_form_rectangle(a, b, c, d):
+    print("A rectangle can be formed with the given sides.")
+else:
+    print("A rectangle cannot be formed with the given sides.")
