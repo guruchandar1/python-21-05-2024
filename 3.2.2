@@ -1,0 +1,28 @@
+import itertools
+
+def is_rectangle(sides):
+
+    pairs = list(itertools.combinations(sorted(sides), 2))
+
+   
+    for pair in pairs:
+        if pair[0] + pair[1] not in sides:
+            return False
+
+    return True
+
+def main():
+    
+    a = float(input("Enter the length of side a: "))
+    b = float(input("Enter the length of side b: "))
+    c = float(input("Enter the length of side c: "))
+    d = float(input("Enter the length of side d: "))
+
+  
+    if is_rectangle([a, b, c, d]):
+        print("A rectangle can be formed.")
+    else:
+        print("A rectangle cannot be formed.")
+
+if __name__ == "__main__":
+    main()
