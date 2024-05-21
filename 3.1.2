@@ -1,0 +1,23 @@
+def is_valid_driver(marital_status, gender, age):
+    """
+    Function to check if a driver is insured based on their marital status, gender, and age.
+    """
+    if marital_status == 'M':
+        return True
+    elif marital_status == 'U':
+        if gender == 'M' and age > 30:
+            return True
+        elif gender == 'F' and age > 25:
+            return True
+    return False
+
+def main():
+    # Input marital status, gender, and age of the driver
+    marital_status = input("Enter marital status (M for married, U for unmarried): ")
+    gender = input("Enter gender (M for male, F for female): ")
+    age = int(input("Enter age: "))
+
+    # Check if the driver is insured
+    if is_valid_driver(marital_status, gender, age):
+        print("The driver is insured.")
+   
